@@ -5,7 +5,7 @@ perex: |
     Statie supports YAML and Symfony Dependency Injection for some time. But you wanted more! **You wanted Twig**. Sculpin and all [the other PHP Static Website generators](https://www.staticgen.com/) have it.
     <br><br>
     So there you go! Enjoy
-tweet: "New Post on my Blog: New in #Statie 4.5: #Twig Support #symfony #latte"
+tweet: "New Post on my Blog: New in #Statie 4.5: #Twig Support"
 tweet_image: "/assets/images/posts/2018/statie-45/statie-45.png"
 
 updated_since: "September 2018"
@@ -54,11 +54,7 @@ layout: "_layouts/default.twig"
 
 ### 3. Enable Twig
 
-```yaml
-# statie.yml
-parameters:
-    templating: twig
-```
+It's by default on!
 
 And you're ready to go!
 
@@ -68,7 +64,7 @@ And you're ready to go!
 
 Update it in composer:
 
-```php
+```bash
 composer require symplify/statie 4.5
 ```
 
@@ -85,13 +81,13 @@ Before the paths of included files were just a file name and the full path was g
 ```bash
 /_snippets
     /post
-        detail.latte
+        detail.twig
     /lecture
-        detail.latte
+        detail.twig
 ```
 
 ```twig
-{include "detail"}
+{% include "detail" %}
 ```
 
 Which file will is used? Or is it a block import? Magic :)
